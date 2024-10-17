@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos - Moda</title>
+    <link rel="stylesheet" href="../static/css/estiloCP.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="logo">
+            <img src="../static/img/logo.png" alt="Logo Moda Estilo">
+        </div>
+        <div class="form-box">
+            <h2>Cadastro de Produtos</h2>
+            <form action="/criar", method="post">
+                <label for="produto">Produtos*</label>
+                <input type="text" id="produto" name="produto" placeholder="Informe qual é o produto" required>
+
+                <label for="estoque">Estoque*</label>
+                <input type="text" id="estoque" name="estoque" placeholder="Informe a quantidade em estoque" required>
+
+                <label for="preco">Preço*</label>
+                <input type="number" id="preco" name="preco" placeholder="Informe o preço" required>
+
+                <label for="categoria">Categoria*</label>
+                <input type="text" id="categoria" name="categoria" placeholder="Informe a categoria" required>
+
+                <label for="tamanho">Tamanho*</label>
+                <input type="text" id="tamanho" name="tamanho" placeholder="Informe o tamanho" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

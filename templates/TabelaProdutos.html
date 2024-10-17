@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" href="../static/css/TabelaProdutos.css">
+</head>
+<body>
+    <!-- Logo da página -->
+    <header class="header">
+        <a class="btn-back" href="/home">
+            <img  src="../static/img/setaBack.png" alt="Botão voltar" class="logo">
+        </a>
+        <img src="../static/img/logoModaEstilo.png" alt="Logo Moda Estilo" class="logo">
+    </header>
+
+    <!-- Conteúdo principal -->
+    <div class="container">
+        <h2>Lista de Produtos</h2>
+
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Produtos</th>
+                    <th>Estoque</th>
+                    <th>Preço</th>
+                    <th>Categoria</th>
+                    <th>Tamanho</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+                <!-- Usar Jinja2 para renderizar produtos diretamente no servidor -->
+                {% for produto in produtos %}
+                <tr>
+                    <td>{{ produto.Nome }}</td>
+                    <td>{{ produto.Quantidade }}</td>
+                    <td>{{ produto.Preço}}</td>
+                    <td>{{ produto.Categoria }}</td>
+                    <td>{{ produto.Tamanho }}</td>
+                    <td>
+                        <a href="/editarProdutos/{{ produto.doc_id }}"><img class="icone" src="/static/img/editar.png"></a>
+                        <a href="/excluir/{{ produto.doc_id }}"><img class="icone" src="/static/img/excluir.png"></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Paginação -->
+        <div class="pagination">
+            {% if pagina_atual > 1 %}
+                <a href="?pagina={{ pagina_atual - 1 }}"><button>Página Anterior</button></a>
+            {% else %}
+                <button disabled>Página Anterior</button>
+            {% endif %}
+
+            <span id="pageNumber">{{ pagina_atual }}</span>
+
+            {% if pagina_atual < total_paginas %}
+                <a href="?pagina={{ pagina_atual + 1 }}"><button>Próxima Página</button></a>
+            {% else %}
+                <button disabled>Próxima Página</button>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Inclui o arquivo JavaScript externo -->
+    <script src="../static/scripts/paginaçãoProdutos.js"></script>
+</body>
+</html>

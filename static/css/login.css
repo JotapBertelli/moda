@@ -1,0 +1,133 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+.tudo {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("/static/img/background.jpeg");
+    background-size: cover;
+
+}
+
+.userlogo{
+
+  width: 110px;
+  height: 110px;
+  justify-content: center;
+  margin-top: -100px;
+  margin-left: 85px;
+}
+
+.form {
+    height: 25em;
+    width: 23em;
+    padding: 4%;
+    border-radius: 16px;
+    background: #e8e8e8;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+
+
+.form {
+  height: 25em;
+  width: 23em;
+  padding: 4%;
+  border-radius: 16px;
+  background: #e8e8e8;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+
+}
+
+#login-lable {
+  height: 15%;
+  text-align: center;
+  font-size: 34px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-shadow: -2px -2px 3px #ffffff ,
+              2px 2px 3px #bababa;
+  position: relative;
+  top: -5px;
+  font-family: Arial;
+}
+
+.input {
+  height: 16%;
+  padding: 1px 8px;
+  border: none;
+  font-size: 1em;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  background: #f3f3f3;
+  box-shadow: inset -2px -2px 4px #ffffff,
+              inset 2px 2px 4px rgba(0, 0, 0, 0.356);
+  text-decoration: none;
+  background: linear-gradient(to right,white, #80808010, white);
+  background-size: 200% 200%;
+  animation: input 4s infinite;
+
+}
+
+.input:focus-visible {
+  outline: none;
+  background: rgb(241, 241, 241);
+}
+
+#btn {
+  font-size: x-large;
+  letter-spacing: 3px;
+  color: white;
+  font-weight: 700;
+  height: 18%;
+  background: linear-gradient(144deg,#978D87
+              50%,#F2EBE7);
+  border-radius: 8px;
+  border: none;
+  box-shadow: inset 1px 3px 3px #ffffffbd,
+               inset -4px -4px 3px #00000046;
+  background-size: 150% 150%;
+  animation: input 5s infinite;
+  transition: all 900ms ease-in;
+  margin-top: 30px;
+}
+
+#btn:hover {
+  position: relative;
+  bottom: 3px;
+  background: linear-gradient(144deg, #8c614f,
+  #6c6665 50%, #7a7a7a);
+}
+
+@keyframes input {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+

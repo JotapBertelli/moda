@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Vendas</title>
+    <link rel="stylesheet" href="../static/css/TabelaProdutos.css">
+</head>
+<body>
+    <!-- Logo da página -->
+    <header class="header">
+
+        <img src="../static/img/logoModaEstilo.png" alt="Logo Moda Estilo" class="logo">
+    </header>
+
+    <!-- Conteúdo principal -->
+    <div class="container">
+        <h2>Lista de Produtos</h2>
+
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Vendedor</th>
+                    <th>Tamanho</th>
+                    <th>Preço</th>
+                    <th>Categoria</th>
+                    <th>Avaliação</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+                <!-- Os produtos serão carregados aqui via JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Paginação -->
+        <div class="pagination">
+            <button id="prevPage" disabled>Página Anterior</button>
+            <span id="pageNumber">1</span>
+            <button id="nextPage">Próxima Página</button>
+        </div>
+    </div>
+
+    <!-- Inclui o arquivo JavaScript externo -->
+    <script>
+        const produtos = {{ produtos | tojson }};  // Passa os produtos via Flask
+    </script>
+    <script src="../static/scripts/paginaçãoProdutos.js"></script>
+</body>
+</html>

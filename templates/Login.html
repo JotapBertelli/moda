@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+<body class="tudo">
+<div>
+    <form action="/autenticar" class="form" method="post">
+        <figure>
+            <img class="userlogo" src="../static/img/usuario.png">
+        </figure>
+            <span id="login-lable">Bem-vindo de volta!</span>
+            <p>Usuário *</p>
+            <input class="input" name='username' type="text" placeholder="Informe seu Usuário">
+            <p>Senha *</p>
+            <input class="input" name='password' type="password" placeholder="Informe sua Senha" minlength="8" maxlength="15">
+            <button type="submit" id="btn">LOGIN</button>
+        </form>
+
+
+
+</div>
+
+{% if error %}
+<script>
+    alert("Usuário ou senha incorretos. Tente novamente.");
+</script>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joana Estilo</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <!-- Seção Principal -->
+    <section class="banner">
+        <!-- Ícone do cabide no canto superior esquerdo -->
+        <img src="../static/img/hanger.png" alt="Ícone do cabide" class="icon-cabide" onclick="toggleMenu()">
+
+        <div class="content">
+            <!-- Texto central -->
+            <h1><img src="../static/img/logoModaEstilo.png" alt="Logo" class="logo-modaEstilo"></h1>
+        </div>
+
+        <!-- Imagem da mulher no canto inferior direito -->
+        <img src="../static/img/WomanHome.png" alt="Joana Estilo" class="joana-image">
+    </section>
+
+    <!-- Menu Lateral -->
+<div id="sidebarMenu" class="sidebar">
+    <!-- Botão para fechar o menu -->
+    <div class="sidebar-item">
+        <a href="javascript:void(0)" onclick="toggleMenu()">
+            <img src="../static/img/close.png" alt="Voltar">
+            <span>Fechar menu</span>
+        </a>
+    </div>
+
+    <div class="sidebar-item">
+        <a href="/produtos">
+            <img  src="../static/img/estoque.png" alt="Estoque">
+            <span>Estoque</span>
+        </a>
+    </div>
+
+    <div class="sidebar-item">
+        <a href="/vendas">
+            <img  src="../static/img/vendas.png" alt="Estoque">
+            <span>Vendas</span>
+        </a>
+    </div>
+
+<div class="sidebar-item">
+        <a href="/cadastrarProdutos">
+            <img src="../static/img/cadastroProduto.png" alt="Cadastro de Produto">
+            <span>Cadastro de Produto</span>
+        </a>
+    </div>
+
+    <div class="sidebar-item">
+        <a href="/cadastrarVendas">
+            <img src="../static/img/registrarVenda.png" alt="Registrar Venda">
+            <span>Registrar Venda</span>
+        </a>
+    </div>
+
+</div>
+
+
+    <script src="../static/scripts/script.js"></script>
+</body>
+</html>
